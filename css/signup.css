@@ -20,17 +20,7 @@ body {
 
 .logo {
     height: 50px;
-    /* margin-left: calc(100% - 117%); */
 }
-
-/* .navbar {
-    background-color: rgba(68, 68, 68, 0.132) !important;
-}
-
-.left-menu .item a,
-.right-menu .item a {
-    color: rgb(32, 0, 61);
-} */
 
 .container {
     display: flex;
@@ -39,20 +29,15 @@ body {
 }
 
 .signup-box {
-    /* position: absolute; */
     width: 600px;
-    /* margin: 0 40px; */
-    /* min-width: 600px; */
     height: 588px;
     top: 0;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     border-radius: 10px;
     margin: 0 20%;
     box-shadow: 0px 0px 20px 10px #00000069;
-    /* padding-left: 35px; */
 }
 
 .close-btn {
@@ -90,13 +75,7 @@ body {
 
 .heading-signup {
     display: flex;
-    /* justify-content: center; */
     align-items: end;
-    /* margin-top: 30px; */
-    /* height: 110px; */
-    /* width: 50%; */
-    /* border: 1px solid black; */
-    /* background-color: rgb(102, 102, 244); */
 }
 
 .create-acc-heading p{
@@ -108,18 +87,15 @@ body {
 .form-for-signup {
     width: 100%;
     margin-top: 10px;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .heading-signup h1 {
-    /* padding: 50px 0; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: bolder;
-    /* text-shadow: 0px 0px 3px #000000d6; */
     letter-spacing: 2px
 }
 
@@ -129,17 +105,14 @@ body {
 }
 
 .name-box .boxes {
-    /* margin-right: 10px; */
     width: 12rem;
 }
 .boxes input {
     border: none;
-    /* display: block; */
     height: 45px;
     width: 100%;
     padding: 0 15px;
     margin: 10px 0;
-    /* border: 2px solid rgb(0 0 0 / 26%); */
     border-radius: 5px;
     letter-spacing: 1.5px;
     font-size: 16px;
@@ -190,7 +163,6 @@ input:focus {
     }
 
     .name-box .boxes {
-        /* margin-right: 10px; */
         width: 9.5rem;
     }
 
@@ -208,11 +180,14 @@ input:focus {
 }
 
 @media (max-width: 640px) {    
+    .container {
+        margin-top: 6vh;
+    }
+
     .signup-box {
         height: 500px;
         background: transparent;
         width: 100%;
-        /* border: 1px solid #fff; */
         margin: 0;
         color: #fff;
         box-shadow: none;
@@ -224,7 +199,6 @@ input:focus {
     .close-btn {
         position: absolute;
         top: 15px;
-        /* right: 30px; */
         display: flex;
         justify-content: end;
         margin-right: 15px;
@@ -236,9 +210,7 @@ input:focus {
     }
 
     .boxes input {
-        /* background: transparent; */
         border: none !important;
-        /* border: 1px solid #fff !important; */
         border-radius: 3px;
         padding: 0 10px !important;
         color: #fff;
@@ -276,19 +248,11 @@ input:focus {
     }
 
     form.form-for-signup {
-        /* padding: 0; */
         width: 100%;
     }
 
     .boxes input {
-        /* background: transparent; */
         width: 100% !important;
-        border: none !important;
-        /* border: 1px solid #fff !important; */
-        border-radius: 3px;
-        padding: 0 10px !important;
-        color: #fff;
-        box-shadow: none;
         font-size: 80% !important;
     }
 
@@ -299,5 +263,11 @@ input:focus {
 
     .accept-statement p {
         font-size: 80% !important;
+    }
+}
+
+@media (max-height: 700px) {
+    .container {
+        margin-top: 0px !important;
     }
 }

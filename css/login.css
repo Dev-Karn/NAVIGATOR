@@ -20,17 +20,7 @@ body {
 
 .logo {
     height: 50px;
-    /* margin-left: calc(100% - 117%); */
 }
-
-/* .navbar {
-    background-color: rgba(68, 68, 68, 0.132) !important;
-}
-
-.left-menu .item a,
-.right-menu .item a {
-    color: rgb(32, 0, 61);
-} */
 
 .container {
     display: flex;
@@ -39,10 +29,7 @@ body {
 }
 
 .login-box {
-    /* position: absolute; */
     width: 600px;
-    /* margin: 0 40px; */
-    /* min-width: 600px; */
     height: 588px;
     top: 0;
     background-color: #fff;
@@ -53,15 +40,6 @@ body {
     margin: 0 20%;
     box-shadow: 0px 0px 20px 10px #00000069;
 }
-
-
-/* .box {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border: 1px;
-    border: 1px solid black;
-} */
 
 .close-btn {
     display: flex;
@@ -97,27 +75,18 @@ body {
     justify-content: center;
     align-items: end;
     margin-top: 50px;
-    /* height: 110px; */
     width: 50%;
-    /* border: 1px solid black; */
-    /* background-color: rgb(102, 102, 244); */
 }
 
 .heading-login h1 {
-    /* padding: 50px 0; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: bolder;
-    /* text-shadow: 0px 0px 3px #000000d6; */
     letter-spacing: 2px
 }
 
 .form-for-login {
-    /* margin-top: 10px; */
-    /* border: 1px solid #000; */
     padding: 30px 0px;
-    /* display: flex; */
-    /* justify-content: start; */
 }
 
 .boxes input {
@@ -172,12 +141,12 @@ input:focus {
 @media (max-width: 640px) {
     .container {
         height: 500px;
+        margin-top: 6vh;
     }
     .login-box {
         height: 415px;
         background: transparent;
         width: 100%;
-        /* border: 1px solid #fff; */
         margin: 0;
         color: #fff;
         box-shadow: none;
@@ -189,7 +158,6 @@ input:focus {
     .close-btn {
         position: absolute;
         top: 15px;
-        /* right: 30px; */
         display: flex;
         justify-content: end;
         margin-right: 15px;
@@ -211,7 +179,7 @@ input:focus {
     }
 
     .boxes input::placeholder {
-        color: #fff !important;
+        color: rgba(255, 255, 255, 0.737) !important;
     }
 
     .boxes input:focus-visible {
@@ -239,19 +207,11 @@ input:focus {
 
 @media (max-width: 400px) {
     form.form-for-login {
-        /* padding: 0; */
         width: 80%;
     }
 
     .boxes input {
-        background: transparent;
         width: 100% !important;
-        border: none !important;
-        border: 1px solid #fff !important;
-        border-radius: 3px;
-        padding: 0 10px !important;
-        color: #fff;
-        box-shadow: none;
         font-size: 80% !important;
     }
 
@@ -266,13 +226,8 @@ input:focus {
     }
 }
 
-@media (max-width: 375px) {
-    .close-btn {
-        position: absolute;
-        /* top: 15px; */
-        /* right: 30px; */
-        /* display: flex; */
-        /* justify-content: end; */
-        /* margin-right: 15px; */
+@media (max-height: 720px) {
+    .container {
+        margin-top: 0px;
     }
 }
