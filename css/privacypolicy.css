@@ -1,0 +1,141 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 1;
+}
+
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    margin: 0 7%;
+    padding-top: 120px;
+    line-height: 24px;
+}
+
+.container-1 {
+    left: 0;
+    margin-left: 7%;
+    padding-right: 30px;
+    margin-top: 5.9rem;
+    /* background: moccasin; */
+    width: calc(100% - 1223px);
+    /* display: flex; */
+    min-width: 291px;
+    max-width: 300px;
+    max-height: calc(100vh - 212px);
+    overflow: scroll;
+    position: fixed;
+    z-index: 0;
+}
+
+.container-1 li {
+    padding-top: 10px;
+    list-style: none;
+    font-weight: 600;
+}
+
+.container-1 li a {
+    color: #4c7af1;
+    border-bottom: 3px solid #fff;
+}
+
+.container-1 li a:hover {
+    border-bottom-color: rgba(76, 122, 241, .75);
+    transition: all .2s ease;
+}
+
+.container-2 {
+    position: relative;
+    margin-left: 18rem;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    padding-top: 25px;
+}
+
+.modified-date {
+    margin: 0;
+    padding-top: 5px;
+}
+
+p,
+h4 {
+    padding-top: 13px;
+}
+
+.information-details {
+    padding-top: 10px;
+}
+
+.information-details li {
+    padding-top: 3px;
+}
+
+.mail {
+    padding-top: 8px;
+}
+
+@media (max-width: 690px) {
+    .container-1 {
+        margin-left: 5%;
+        padding-right: 0;
+        min-width: 257px;
+    }
+
+    .container-2 {
+        margin-left: 15rem;
+    }
+}
+
+@media (max-width: 645px) {
+    .container-1 {
+        margin-left: 0%;
+    }
+
+    .container-2 {
+        margin-left: 13rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .container {
+        margin: 0 0;
+    }
+
+    .container-1 {
+        display: none;
+    }
+
+    .container-2 {
+        margin-left: 0;
+    }
+}
+
+.text-area {
+    margin-top: 45px;
+    /* height: 56%; */
+    padding: 20px 12px;
+    background: #8080801f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    border-radius: 10px;
+}
+
+.section-1{
+    padding-top: 30px;
+}

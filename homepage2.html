@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/homepage2.css">
+    <title>Perfect Path</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+</style>
+
+<body>
+
+    <!--------------------------- NAVBAR ------------------------------>
+
+    <nav class="navbar">
+        <ul class="left-menu">
+            <li class="item-logo">
+                <a href="./homepage2.html">
+                    <img class="logo" src="./Image/cropped-logo-KEIRA.png" alt="Logo">
+                </a>
+            </li>
+
+            <div class="item-menu" id="left-dropdown">
+                <li class="item">
+                    <a href="./homepage2.html">Home</a>
+                </li>
+
+                <li class="item">
+                    <a href="#">About Us</a>
+                </li>
+
+                <li class="item">
+                    <a href="#">Map</a>
+                </li>
+
+                <li class="item">
+                    <a href="#">Support</a>
+                </li>
+
+                <li class="item">
+                    <a href="./Privacypolicy.html">Privacy Policy</a>
+                </li>
+            </div>
+        </ul>
+
+        <ul class="right-menu" id="right-dropdown">
+            <li class="item">
+                <a href="./login.html">Login</a>
+            </li>
+
+            <li class="signup-btn">
+                <a href="./signup.html">Sign Up</a>
+            </li>
+        </ul>
+
+        <div class="hide-login">
+            <div class="login-logo" onclick="onClicklogo()">
+                <img src="./Image/pngwing.com.png" alt="">
+            </div>
+
+            <div class="hamburger" id="menu" onclick="onClickMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!--------------------------- NAVBAR ------------------------------>
+
+    <!--------------------------- SLIDER ------------------------------>
+
+    <div class="wrapper">
+        <div class="prev-btn">
+            <img src="./Image/left-arrow.png" alt="">
+        </div>
+
+        <div class="slide-container">
+            <div class="slide-image">
+                <img src="./Image/slider-image/pexels-deva-darshan-1064129.jpg" alt="">
+            </div>
+
+            <div class="slide-image">
+                <img src="./Image/slider-image/pexels-scott-webb-1029639.jpg" alt="">
+            </div>
+
+            <div class="slide-image">
+                <img src="./Image/slider-image/pexels-pixabay-220201.jpg" alt="">
+            </div>
+
+            <div class="slide-image">
+                <img src="./Image/slider-image/pexels-porapak-apichodilok-346696.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="next-btn">
+            <img src="./Image/right-arrow.png" alt="">
+        </div>
+    </div>
+
+    <div class="navigation-dots"></div>
+
+    <!--------------------------- SLIDER ------------------------------>
+
+    <script src="./javascript/Homepage2.js"></script>
+</body>
+
+</html>
