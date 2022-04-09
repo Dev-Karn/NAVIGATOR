@@ -1,6 +1,11 @@
 function onClickMenu() {
-    document.getElementById("menu").classList.toggle("icon");
+    document.getElementById("menu1").classList.toggle("icon");
     document.getElementById("left-dropdown").classList.toggle("change");
+}
+
+function onClickHamburger() {
+    document.getElementById("menu2").classList.toggle("icon");
+    document.getElementById("full-dropdown").classList.toggle("full-menu");
 }
 
 function onClicklogo() {

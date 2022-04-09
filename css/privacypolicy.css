@@ -9,10 +9,8 @@ html {
 
 .container {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: center; */
     margin: 0 7%;
-    padding-top: 120px;
+    padding-top: 100px;
     line-height: 24px;
 }
 
@@ -21,9 +19,7 @@ html {
     margin-left: 7%;
     padding-right: 30px;
     margin-top: 5.9rem;
-    /* background: moccasin; */
     width: calc(100% - 1223px);
-    /* display: flex; */
     min-width: 291px;
     max-width: 300px;
     max-height: calc(100vh - 212px);
@@ -56,14 +52,6 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-}
-
-h1 {
-    font-weight: 600;
-}
-
-h2 {
-    padding-top: 25px;
 }
 
 .modified-date {
@@ -126,16 +114,35 @@ h4 {
 
 .text-area {
     margin-top: 45px;
-    /* height: 56%; */
     padding: 20px 12px;
     background: #8080801f;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     border-radius: 10px;
 }
 
 .section-1{
     padding-top: 30px;
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 100% !important;
+    }
+    
+    .container .container-2 {
+        padding: 0 25px;
+        width: 100%;
+        word-wrap: break-word;
+    }
+
+    .heading-site{
+        display: flex;
+    }
+
+    .container-2 .heading-site h1{
+        display: flex;
+        word-wrap: break-word;
+    }
 }
