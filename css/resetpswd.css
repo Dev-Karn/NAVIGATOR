@@ -99,6 +99,7 @@ body {
     width: 100%;
     letter-spacing: 0.8px;
     color: rgb(117, 117, 117);
+    line-height: 1.3rem;
 }
 
 .form-for-reset {
