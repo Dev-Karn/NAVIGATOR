@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
-    font-weight: 600;   
+    font-weight: 600;
 }
 
 body {
@@ -28,9 +28,9 @@ body {
     align-items: center;
 }
 
-.login-box {
-    width: 600px;
-    height: 588px;
+.reset-pswd-box {
+    width: 385px;
+    height: 550px;
     top: 0;
     background-color: #fff;
     display: flex;
@@ -70,35 +70,61 @@ body {
     transform: rotate(411deg) translate(-9px, 10px)
 }
 
-.heading-login {
+.heading-reset-pswd {
     display: flex;
-    justify-content: center;
     align-items: end;
-    margin-top: 50px;
-    width: 50%;
+    margin-top: 1.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
 
-.heading-login h1 {
+.heading-reset-pswd h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     font-weight: bolder;
     letter-spacing: 2px
 }
 
-.form-for-login {
-    padding: 30px 0px;
+.container-2 {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 1rem; */
+    margin-top: 1.9rem;
 }
 
+.reset-para {
+    width: 100%;
+    letter-spacing: 0.8px;
+    color: rgb(117, 117, 117);
+}
+
+.form-for-reset {
+    padding-top: 30px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+.form-for-reset p{
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.8px;
+    color: rgb(117, 117, 117)
+}
 .boxes input {
     border: none;
     display: block;
     height: 45px;
-    width: 18rem;
+    /* width: 20rem; */
+    width: 100%;
     padding: 0 5px;
-    margin: 35px 0;
-    border-bottom: 3px solid rgb(0 0 0 / 26%);
+    margin-bottom: 2rem;
+    border: 2px solid #00000052;
+    border-radius: 5px;
     letter-spacing: 1.5px;
     font-size: 16px;
+    /* background: #9999993d; */
 }
 
 .boxes input:hover,
@@ -106,34 +132,32 @@ input:focus {
     outline: none;
 }
 
-.login-btn button {
+.submit-btn button {
     border: none;
     font-size: large;
     background: linear-gradient(to left, rgb(33, 13, 59), rgb(68, 137, 211));
     color: #fff;
-    width: 18rem;
+    width: 100%;
     padding: 13px 7px;
-    border-radius: 3px;
+    border-radius: 5px;
     letter-spacing: 1px;
+    margin-top: 10px;
     margin-bottom: 15px;
     cursor: pointer;
 }
 
-.forget-pswd p,
-.signup-line p {
-    color: rgb(117, 117, 117);
-    letter-spacing: 0.5px;
-    margin-bottom: 15px;
+.back-to-login {
+    display: flex;
 }
 
-.forget-pswd a,
-.signup-line a {
+.back-to-login p a {
+    letter-spacing: 0.5px;
     text-decoration: none;
-    color: rgb(65, 132, 204);
+    color: rgb(61, 137, 218);
 }
 
 @media (max-width: 1008px) {
-    .login-box {
+    .reset-pswd-box {
         max-width: 385px;
     }
 }
@@ -143,8 +167,9 @@ input:focus {
         height: 500px;
         margin-top: 6vh;
     }
-    .login-box {
-        height: 415px;
+
+    .reset-pswd-box {
+        height: 330px;
         background: transparent;
         width: 100%;
         margin: 0;
@@ -168,6 +193,14 @@ input:focus {
         background-color: #fff !important;
     }
 
+    .reset-para {
+        color: #fff;
+    }
+
+    .form-for-reset p {
+        color: #fff;
+    }
+    
     .boxes input {
         background: transparent;
         border: none !important;
@@ -178,36 +211,45 @@ input:focus {
         box-shadow: none;
     }
 
-    .boxes input::placeholder {
+    /* .boxes input::placeholder {
         color: rgba(255, 255, 255, 0.737) !important;
-    }
+    } */
 
     .boxes input:focus-visible {
         box-shadow: 0px 4px 7px 0px #fff;
         transition: all 200ms ease-in-out;
     }
 
-    .login-btn button:hover {
+    .submit-btn button:hover {
         background: #fff;
         color: rgb(42, 46, 99);
         transition: 700ms cubic-bezier(0.48, 0.15, 0.18, 1) !important;
     }
 
-    .forget-pswd p,
-    .signup-line p {
-        color: #fff !important;
-    }
-
-    .forget-pswd a,
-    .signup-line a {
-        text-decoration: none;
+    .back-to-login p a{
         color: rgb(128 189 255) !important;
     }
 }
 
 @media (max-width: 400px) {
-    .form-for-login {
-        width: 80%;
+    .container-2 {
+        width: 65%;
+    }
+
+    .heading-reset-pswd h1{
+        font-size: 25px;
+    }
+
+    .reset-para p {
+        font-size: 15px;
+    }
+
+    .form-for-reset {
+        width: 100%;
+    }
+
+    .form-for-reset p{
+        font-size: 15px;
     }
 
     .boxes input {
@@ -215,14 +257,27 @@ input:focus {
         font-size: 80% !important;
     }
 
-    .login-btn button {
+    .submit-btn button {
         width: 100% !important;
         font-size: 100% !important;
     }
 
-    .forget-pswd p,
-    .signup-line p {
-        font-size: 80% !important;
+    .back-to-login p a {
+        font-size: 95% !important;
+    }
+}
+
+@media (max-width: 310px) {
+    .container-2 {
+        width: 75% !important;
+    }
+
+    .heading-reset-pswd h1 {
+        font-size: 22px;
+    }
+
+    .reset-para p {
+        font-size: 13px;
     }
 }
 
