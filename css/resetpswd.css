@@ -224,7 +224,7 @@ input:focus {
     .submit-btn button:hover {
         background: #fff;
         color: rgb(42, 46, 99);
-        transition: 250ms cubic-bezier(0.48, 0.15, 0.18, 1) !important;
+        transition: 50ms cubic-bezier(0.48, 0.15, 0.18, 1) !important;
     }
 
     .back-to-login p a{
