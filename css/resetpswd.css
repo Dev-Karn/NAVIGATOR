@@ -221,7 +221,8 @@ input:focus {
         transition: all 200ms ease-in-out;
     }
 
-    .submit-btn button:hover,
+    /*.submit-btn button:hover, */
+
     .submit-btn button:focus-visible{
         background: #fff;
         color: rgb(42, 46, 99);
