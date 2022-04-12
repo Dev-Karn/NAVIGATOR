@@ -99,6 +99,7 @@ body {
     width: 100%;
     letter-spacing: 0.8px;
     color: rgb(117, 117, 117);
+    line-height: 1.5rem;
 }
 
 .form-for-reset {
@@ -195,7 +196,6 @@ input:focus {
 
     .reset-para {
         color: #fff;
-        line-height: 1.4rem;
     }
 
     .form-for-reset p {
