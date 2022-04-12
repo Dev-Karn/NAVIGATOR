@@ -227,7 +227,7 @@ input:focus {
         background: #fff;
         color: rgb(42, 46, 99);
         /* transition: 50ms cubic-bezier(0.48, 0.15, 0.18, 1) !important; */
-        transition: all 50ms ease;
+        transition: all 10ms ease;
     }
 
     .back-to-login p a{
