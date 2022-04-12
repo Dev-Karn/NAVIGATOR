@@ -226,12 +226,7 @@ input:focus {
     .submit-btn button:focus-visible{
         background: #fff;
         color: rgb(42, 46, 99);
-<<<<<<< HEAD
         /* transition: 250ms cubic-bezier(0.48, 0.15, 0.18, 1) !important; */
-=======
-        /* transition: 50ms cubic-bezier(0.48, 0.15, 0.18, 1) !important; */
-        transition: all 0ms ease;
->>>>>>> 253aca775ba518423dff12b3b34ed7282a3498df
     }
 
     .back-to-login p a{
