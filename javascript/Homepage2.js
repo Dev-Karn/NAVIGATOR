@@ -19,7 +19,6 @@ const prevBtn = document.querySelector(".prev-btn");
 const navigationDots = document.querySelector(".navigation-dots");
 
 let numberOfImages = slideImage.length;
-let slideWidth = slideImage[0].clientWidth;
 let currentSlide = 0;
 
 // Set up the slider
@@ -85,6 +84,7 @@ prevBtn.addEventListener("click", () => {
 // Go To Slide
 
 function goToSlide(slideNumber) {
+    let slideWidth = slideImage[0].clientWidth;
     slideContainer.style.transform =
         "translateX(-" + slideWidth * slideNumber + "px)";
 
@@ -92,6 +92,21 @@ function goToSlide(slideNumber) {
 
     setActiveClass();
 }
+
+// Automatic Go To Slide
+
+setInterval(function () {
+    currentSlide += 1;
+    if (currentSlide >= numberOfImages) {
+        currentSlide = 0;
+    }
+
+    let slideWidth = slideImage[0].clientWidth;
+    slideContainer.style.transform =
+        "translateX(-" + slideWidth * currentSlide + "px)";
+    
+    setActiveClass();
+}, 3500);
 
 // Set Active Class
 
