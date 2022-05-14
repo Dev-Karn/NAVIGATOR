@@ -1,6 +1,9 @@
 function onClickMenu() {
-    document.getElementById("menu1").classList.toggle("icon");
-    document.getElementById("left-dropdown").classList.toggle("change");
+    const hamburger1 = document.querySelector("#menu1");
+    hamburger1.classList.toggle("icon");
+
+    const leftDropdown = document.querySelector("#left-dropdown");
+    leftDropdown.classList.toggle("change");
 }
 
 function onClickHamburger() {
@@ -12,14 +15,28 @@ function onClicklogo() {
     document.getElementById("right-dropdown").classList.toggle("login-dropdown");
 }
 
+
+
 const slideImage = document.querySelectorAll(".slide-image");
 const slideContainer = document.querySelector(".slide-container");
 const nextBtn = document.querySelector(".next-btn");
 const prevBtn = document.querySelector(".prev-btn");
 const navigationDots = document.querySelector(".navigation-dots");
+const textAnimation = document.querySelectorAll('#textAnimation');
 
 let numberOfImages = slideImage.length;
 let currentSlide = 0;
+
+// Set Text Animation
+
+function setTextToAnimate(currentSlide) {
+
+    // Set Text Animation for Text on Slide Image
+
+    let currentAnimation = document.querySelector('.slider-image-text.slider-text-animation');
+    currentAnimation.classList.remove('slider-text-animation');
+    textAnimation[currentSlide].classList.add("slider-text-animation");
+}
 
 // Set up the slider
 
@@ -34,6 +51,7 @@ function init() {
         img.style.left = i * 100 + "%";
     });
 
+    textAnimation[0].classList.add("slider-text-animation");
     slideImage[0].classList.add("active");
 
     createNavigationDots();
@@ -84,6 +102,7 @@ prevBtn.addEventListener("click", () => {
 // Go To Slide
 
 function goToSlide(slideNumber) {
+    setTextToAnimate(slideNumber);
     let slideWidth = slideImage[0].clientWidth;
     slideContainer.style.transform =
         "translateX(-" + slideWidth * slideNumber + "px)";
@@ -95,18 +114,15 @@ function goToSlide(slideNumber) {
 
 // Automatic Go To Slide
 
-setInterval(function () {
+setInterval(() => {
     currentSlide += 1;
     if (currentSlide >= numberOfImages) {
         currentSlide = 0;
     }
 
-    let slideWidth = slideImage[0].clientWidth;
-    slideContainer.style.transform =
-        "translateX(-" + slideWidth * currentSlide + "px)";
-    
-    setActiveClass();
-}, 3500);
+    goToSlide(currentSlide);
+
+}, 3500)
 
 // Set Active Class
 
