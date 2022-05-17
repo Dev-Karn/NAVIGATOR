@@ -1,21 +1,50 @@
-function onClickMenu() {
-    const hamburger1 = document.querySelector("#menu1");
-    hamburger1.classList.toggle("icon");
+// Dropdown for Left Nav Menu at 800px
 
-    const leftDropdown = document.querySelector("#left-dropdown");
-    leftDropdown.classList.toggle("change");
-}
+const leftDropdown = document.querySelector("#left-dropdown");
+const hamburger1 = document.querySelector("#menu1");
 
-function onClickHamburger() {
-    document.getElementById("menu2").classList.toggle("icon");
-    document.getElementById("full-dropdown").classList.toggle("full-menu");
-}
+document.addEventListener('click', applyActive => {
+    const checkHamburger1 = applyActive.target.matches('#menu1');
+    const checkbars = applyActive.target.matches('#barsAt800px');
+    const checkMenuPanel = applyActive.target.matches('#navMenuAt800px');
+    if (checkHamburger1 == true || checkbars == true) {
+        leftDropdown.classList.toggle("activve");
+        hamburger1.classList.toggle("icon");
+    }
+
+    if (checkbars == false && checkHamburger1 == false && checkMenuPanel == false) {
+        leftDropdown.classList.remove("activve");
+        hamburger1.classList.remove("icon");
+    }
+})
+
+// Dropdown for Left Nav Menu at 375px
+
+const fullDropdown = document.querySelector("#full-dropdown");
+const hamburger2 = document.querySelector("#menu2");
+
+document.addEventListener('click', applyActive => {
+    const checkHamburger2 = applyActive.target.matches('#menu2');
+    const checkbars = applyActive.target.matches('#barsAt375px');
+    const checkMenuPanel = applyActive.target.matches('#navMenuAt375px');
+    if (checkHamburger2 == true || checkbars == true) {
+        fullDropdown.classList.toggle("activve");
+        hamburger2.classList.toggle("icon");
+    }
+
+    if (checkbars == false && checkHamburger2 == false && checkMenuPanel == false) {
+        fullDropdown.classList.remove("activve");
+        hamburger2.classList.remove("icon");
+    }
+})
+
+// Dropdown for Right Nav Menu/Login Area at 800px
 
 function onClicklogo() {
     document.getElementById("right-dropdown").classList.toggle("login-dropdown");
 }
 
-
+// ------------------ Image Slider at the beginning --------------------------//
 
 const slideImage = document.querySelectorAll(".slide-image");
 const slideContainer = document.querySelector(".slide-container");
@@ -139,3 +168,5 @@ function setActiveClass() {
     currentDot.classList.remove("active");
     navigationDots.children[currentSlide].classList.add("active");
 }
+
+// ------------------ Image Slider at the beginning --------------------------//

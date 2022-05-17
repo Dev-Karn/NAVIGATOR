@@ -429,6 +429,10 @@ a:focus {
         display: none;
     }
 
+    .activve {
+        display: contents;
+    }
+
     .dropdown-at-800px {
         display: flex;
         /* list-style: none; */
@@ -598,6 +602,10 @@ a:focus {
 
     .full-menu {
         display: none;
+    }
+
+    .activve {
+        display: contents;
     }
 
     .dropdown-at-375px {
