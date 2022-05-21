@@ -24,7 +24,7 @@ html {
     padding-right: 30px;
     margin-top: 5.9rem;
     width: calc(100% - 1223px);
-    min-width: 291px;
+    min-width: 270px;
     max-width: 300px;
     max-height: calc(100vh - 212px);
     overflow: scroll;
@@ -32,8 +32,13 @@ html {
     z-index: 0;
 }
 
+.container-1 ul {
+    padding: 0;
+}
+
 .container-1 li {
     padding-top: 10px;
+    padding-left: 30px;
     list-style: none;
     font-weight: 600;
 }
@@ -50,8 +55,8 @@ html {
 
 .container-2 {
     position: relative;
-    margin-left: 18rem;
-    padding: 0 40px;
+    margin-left: 16rem;
+    padding: 0 30px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -80,40 +85,8 @@ h4 {
     padding-top: 8px;
 }
 
-@media (max-width: 690px) {
-    .container-1 {
-        margin-left: 5%;
-        padding-right: 0;
-        min-width: 257px;
-    }
-
-    .container-2 {
-        margin-left: 15rem;
-    }
-}
-
-@media (max-width: 645px) {
-    .container-1 {
-        margin-left: 0%;
-    }
-
-    .container-2 {
-        margin-left: 13rem;
-    }
-}
-
-@media (max-width: 620px) {
-    .container {
-        margin: 0 0;
-    }
-
-    .container-1 {
-        display: none;
-    }
-
-    .container-2 {
-        margin-left: 0;
-    }
+strong {
+    overflow-wrap: break-word;
 }
 
 .text-area {
@@ -130,22 +103,50 @@ h4 {
     padding-top: 30px;
 }
 
+@media (max-width: 768px) {
+    .container {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container-1 {
+        display: none;
+    }
+
+    .container-2 {
+        width: 95%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .container-2 {
+        padding: 0 25px !important;
+    }
+}
+
+/* @media (max-width: 375px) {
+    .container-2 {
+        padding: 0 !important;
+    }
+} */
+
 @media (max-width: 375px) {
     .container {
         width: 100% !important;
     }
-    
+
     .container .container-2 {
-        padding: 0 25px;
         width: 100%;
         word-wrap: break-word;
     }
 
-    .heading-site{
+    .heading-site {
         display: flex;
     }
 
-    .container-2 .heading-site h1{
+    .container-2 .heading-site h1 {
         display: flex;
         word-wrap: break-word;
     }
