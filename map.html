@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+    <link rel="stylesheet"
+        href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+        type="text/css">
+    <!-- <link rel="stylesheet" href="/css/map.css"> -->
+    <title>Map || NAVIGATOR</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Ubuntu', sans-serif;
+        /* font-weight: 600; */
+    }
+
+    .map-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        z-index: 1;
+    }
+
+    #map {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <!-- <div class="container"> -->
+        <!-- <div class="search-container">
+            <div class="panel-1" id="panel">
+                <input class="search-box" type="text" placeholder="Search The Place">
+                <button class="search-btn-panel-1">
+                    <img src="./Image/search-icon.png" alt="">
+                </button>
+            </div>
+
+            <div class="panel-2" id="panel">
+                <div class="mode-icons">
+                    <img src="./Image/car.png" alt="Car">
+                    <img src="./Image/bicycle.png" alt="Bicycle">
+                    <img src="./Image/train.png" alt="Train">
+                    <img src="./Image/walking.png" alt="Walking">
+                    <img src="./Image/flight.png" alt="Flight">
+                </div>
+
+                <div class="starting-pos">
+                    <img src="./Image/starting-location.png" alt="">
+                    <input class="start-pos-box" type="text" placeholder="Choose starting point">
+                </div>
+                
+                <div class="ending-pos">
+                    <img src="./Image/destination.png" alt="">
+                    <input class="end-pos-box" type="text" placeholder="Choose the destination">
+                </div>
+
+                <div class="search-btn-panel-2">
+                    <button>Search</button>
+                </div>
+
+                <div id="output">
+
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="map-container">
+        <div id='map'></div>
+
+            <!-- <div class="current-loc-icon-box">
+                <img src="./Image/current-location.png" alt="">
+            </div>
+
+            <div class="direction-icon-box">
+                <img src="./Image/direction.png" alt="">
+            </div> -->
+        </div>
+        
+    <!-- </div> -->
+    
+
+    
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_ou6qQobTkpFoTp81Z5tI4gsXUzlNBZY&libraries=places&callback=initMap"></script> -->
+    <script src="./javascript/map.js" defer></script>
+</body>
+</html>
