@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/index.css">
     <title>NAVIGATOR</title>
 </head>
@@ -215,10 +216,12 @@
             <video class="car-background-video" src="./Videos/car-background.mp4" autoplay muted loop type="video/mp4"></video>
             <div class="wrapper-2">
                 <div class="aboutUs-area">
-                    <h1>About Us</h1>
-                    <div class="decoration-line"></div>
+                    <div data-aos="fade-up">
+                        <h1>About Us</h1>
+                        <div class="decoration-line"></div>
+                    </div>
                     <div class="box-for-about-contents">
-                        <p>
+                        <p data-aos="fade-up" data-aos-delay="250">
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, non. Repudiandae, velit maxime explicabo
                             harum in
                             maiores molestias possimus modi hic illum accusantium iure? Cum sunt aspernatur quod consequatur non.<br><br> Rem
@@ -231,7 +234,7 @@
                             facere nam
                             vel autem eos.
                         </p>
-                        <video class="aboutUs-video" src="./Videos/AboutUs_Video.mp4" autoplay muted loop type="video/mp4"></video>
+                        <video class="aboutUs-video" data-aos="fade-up" data-aos-delay="250" src="./Videos/AboutUs_Video.mp4" autoplay muted loop type="video/mp4"></video>
                     </div>
                 </div>
             </div>
@@ -240,13 +243,62 @@
     <!--------------------------- ABOUT US ------------------------------>
 
     <section class="client-contents">
-        <div class="client-area">
+        <div class="client-area" data-aos="fade-up">
             <h1>What Clients Are Saying..</h1>
             <img src="./Image/double-quote-right.png" alt="Quotes-right">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minima neque laudantium repellat aspernatur deserunt magnam qui vero? At maiores nostrum placeat ducimus inventore dolorum magni sint dolor illo unde sapiente accusantium sed, facilis consectetur, iusto quasi, animi neque voluptas.
             </p>
             <cite>— Jean Smith</cite>
+        </div>
+    </section>
+
+    <section class="service-contents">
+        <div class="service-area" data-aos="fade-up">
+            <h1>Our Services</h1>
+            <div class="decoration-line"></div>
+            <div class="service-wrapper">
+                <div class="service-box" data-aos="fade-up">
+                    <h2>Premium Service</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minima neque laudantium repellat
+                        aspernatur deserunt magnam qui vero? At maiores nostrum placeat ducimus inventore dolorum magni sint dolor.
+                    </p>
+                </div>
+
+                <div class="service-box" data-aos="fade-up">
+                    <h2>Great Accuracy</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minima neque laudantium repellat
+                        aspernatur deserunt magnam qui vero? At maiores nostrum placeat ducimus inventore dolorum magni sint dolor.
+                    </p>
+                </div>
+
+                <div class="service-box" data-aos="fade-up">
+                    <h2>Feeds</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minima neque laudantium repellat
+                        aspernatur deserunt magnam qui vero? At maiores nostrum placeat ducimus inventore dolorum magni sint dolor.
+                    </p>
+                </div>
+
+                <div class="service-box" data-aos="fade-up">
+                    <h2>Expert Advice</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minima neque laudantium repellat
+                        aspernatur deserunt magnam qui vero? At maiores nostrum placeat ducimus inventore dolorum magni sint dolor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feed-contents">
+        <div class="feed-area">
+            <h1>Feeds</h1>
+            <div class="feed-wrapper">
+                
+            </div>
         </div>
     </section>
 
@@ -283,20 +335,15 @@
         </div>
     </section>
 
-    <section class="client-contents">
-        <div class="client-area">
-            <h1>What Clients Are Saying..</h1>
-            <img src="./Image/double-quote-right.png" alt="Quotes-right">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores minima neque laudantium repellat
-                aspernatur deserunt magnam qui vero? At maiores nostrum placeat ducimus inventore dolorum magni sint dolor
-                illo unde sapiente accusantium sed, facilis consectetur, iusto quasi, animi neque voluptas.
-            </p>
-            <cite>— Jean Smith</cite>
-        </div>
-    </section>
-
     <script src="./javascript/Homepage2.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 140,
+            duration: 1000,
+            // once: false
+        });
+    </script>
 </body>
 
 </html>

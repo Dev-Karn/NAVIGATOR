@@ -331,7 +331,7 @@ a:focus {
 
 .car-background-video {
     width: 100%;
-    height: 59rem;
+    height: 62rem;
     position: absolute;
     z-index: 1;
     opacity: 0.2;
@@ -358,6 +358,7 @@ a:focus {
     background-color: #4974cd;
     border-radius: 5px;
 }
+
 .box-for-about-contents {
     margin-top: 3rem;
     display: flex;
@@ -515,6 +516,75 @@ a:focus {
     border-bottom: 2px solid #000;
 }
 
+.service-contents,
+.feed-contents {
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    justify-content: center;
+}
+
+.service-area,
+.feed-area {
+    width: 1200px;
+    padding: 0 3rem;
+    margin-top: 5rem;
+}
+
+.service-area > h1 {
+    font-size: 3.5rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+}
+
+.service-area > .decoration-line {
+    margin-left: 0.5rem;
+}
+
+.service-wrapper {
+    width: 100%;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+}
+
+.service-box {
+    width: 15rem;
+    height: 20rem;
+    margin: 18px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 8px 11px 0px #97979785;
+    background-color: #f2f2ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* transition: 0.3s !important; */
+}
+
+.service-box:hover {
+    transition: 0.3s !important;
+    transform: scale(1.05) !important;
+    box-shadow: 14.142px 14.142px 20px 0 rgb(157 157 157 / 50%);
+}
+
+.service-box > h2 {
+    font-size: 1.6rem;
+    font-family: 'Jost', sans-serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-box > p {
+    line-height: 1.4rem;
+    /* font-weight: 600; */
+}
+
+
 @media (max-width: 1200px) {
     .wrapper {
         height: 35rem;
@@ -561,6 +631,23 @@ a:focus {
 
     .aboutUs-video {
         margin-top: 1rem;
+    }
+
+    .service-contents {
+        height: 50rem;
+    }
+
+    .service-area {
+        width: 930px;
+    }
+
+    .service-wrapper {
+        justify-content: space-around;
+    }
+
+    .service-box {
+        width: 20rem;
+        height: 15rem;
     }
 }
 
@@ -654,6 +741,7 @@ a:focus {
         margin-top: 30rem;
     }
 
+    .service-contents,
     .contactUs-contents {
         background-color: #ffffff;
         position: relative;
@@ -756,6 +844,16 @@ a:focus {
         position: absolute;
         z-index: 1;
     }
+
+    .service-contents {
+        height: 70rem;
+    }
+    
+    .service-box {
+        width: 100%;
+        max-width: 35rem;
+        height: 12rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -807,6 +905,10 @@ a:focus {
     .client-area {
         width: 510px;
     }
+
+    .service-area {
+        margin-top: 4rem;
+    }
 }
 
 @media (max-width: 575px) {
@@ -831,6 +933,23 @@ a:focus {
 
     .aboutUs-contents {
         margin-top: 4rem;
+    }
+
+    .service-area > h1 {
+        font-size: 3rem;
+    }
+    
+    .service-box {
+        height: 12.5rem;
+    }
+
+    .service-box > h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .service-box > p {
+        font-size: 0.9rem;
     }
 }
 
@@ -875,6 +994,14 @@ a:focus {
 
     .client-contents {
         height: 35rem;
+    }
+
+    .service-area {
+        padding: 0 35px;
+    }
+
+    .service-box {
+        margin: 18px 0;
     }
 }
 
@@ -985,7 +1112,7 @@ a:focus {
     .car-background-video {
         margin-top: 37rem;
     }
-    
+
     .aboutUs-area {
         padding: 0 25px;
         width: 100%;
@@ -1010,6 +1137,38 @@ a:focus {
 
     .client-area p {
         font-size: 14px;
+    }
+
+    .service-contents {
+        height: 79rem;
+    }
+
+    .service-area {
+        padding: 0;
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-area > h1 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .service-area > .decoration-line {
+        align-self: center;
+    }
+    
+    .service-box {
+        height: 15rem;
+    }
+
+    .service-box > h2 {
+        font-size: 1.3rem;
+    }
+
+    .service-box > p {
+        font-size: 0.9rem;
     }
 
     .contactUs-contents {
