@@ -170,3 +170,81 @@ function setActiveClass() {
 }
 
 // ------------------ Image Slider at the beginning --------------------------//
+
+
+// ------------------ Feed Section API Request --------------------------//
+
+const clienId = "H5xzd8tQCjoec6rsnxnvDAO6CztwakLEPQDMfw63B4k";
+const grid = document.querySelector("#result");
+let index = Math.floor((Math.random() * 1000));
+window.addEventListener('load', loadImg);
+
+function loadImg() {
+    if (grid.innerHTML != '') {
+        removeImg();
+    }
+    
+    let url = 'https://api.unsplash.com/search/photos/?client_id=' + clienId + '&query=tourist-place&page=' +index;
+
+    fetch(url)
+    
+    .then(function (data) {
+        console.log(data);
+        return data.json();
+    })
+
+    .then(function (data) {
+        console.log(data);
+
+        const imageNodes = [];
+        const detailNodes = [];
+        const box = [];
+        const overlayBox = [];
+
+        for (let i = 0; i < data.results.length - 1; i++) {
+            box[i] = document.createElement('div');
+            box[i].className = 'img-box';
+
+            document.getElementById('result').appendChild(box[i]);
+        }
+
+        const imgBox = document.querySelectorAll(".img-box");
+
+        for (let i = 0; i < data.results.length - 1; i++) {
+            imageNodes[i] = document.createElement('div');
+            imageNodes[i].className = 'img';
+            imageNodes[i].style.backgroundImage = `url(${data.results[i].urls.regular})`;
+
+            imgBox[i].appendChild(imageNodes[i]);
+
+            if (`${data.results[i].description}` != 'null') {
+                detailNodes[i] = document.createElement('div');
+                detailNodes[i].className = 'img-detail';
+                detailNodes[i].innerHTML = `${data.results[i].description}`;
+
+                imgBox[i].appendChild(detailNodes[i]);
+            } 
+
+            else if(`${data.results[i].alt_description}` != 'null') {
+                detailNodes[i] = document.createElement('div');
+                detailNodes[i].className = 'img-detail';
+                detailNodes[i].innerHTML = `${data.results[i].alt_description}`;
+
+                imgBox[i].appendChild(detailNodes[i]);
+            }
+            
+            overlayBox[i] = document.createElement('div');
+            overlayBox[i].className = 'overlay-box';
+
+            imgBox[i].appendChild(overlayBox[i]);
+        }
+    })
+
+    console.log(index);
+}
+
+function removeImg() {
+    grid.innerHTML = '';
+}
+
+// ------------------ Feed Section API Request --------------------------//
