@@ -218,14 +218,33 @@ function loadImg() {
             imgBox[i].appendChild(imageNodes[i]);
 
             if (`${data.results[i].description}` != 'null') {
-                detailNodes[i] = document.createElement('div');
-                detailNodes[i].className = 'img-detail';
-                detailNodes[i].innerHTML = `${data.results[i].description}`;
+                let descriptions = `${data.results[i].description}`;
+                // console.log(descriptions, descriptions.length);
+                let alter_description = `${data.results[i].alt_description}`;
+                // console.log(alter_description, alter_description.length);
+
+                if (`${data.results[i].alt_description}` != 'null') {
+                    if (descriptions.length > alter_description.length) {
+                        detailNodes[i] = document.createElement('div');
+                        detailNodes[i].className = 'img-detail';
+                        detailNodes[i].innerHTML = `${data.results[i].alt_description}`;
+                    }
+                    else {
+                        detailNodes[i] = document.createElement('div');
+                        detailNodes[i].className = 'img-detail';
+                        detailNodes[i].innerHTML = `${data.results[i].description}`;
+                    }
+                }
+                else {
+                    detailNodes[i] = document.createElement('div');
+                    detailNodes[i].className = 'img-detail';
+                    detailNodes[i].innerHTML = `${data.results[i].description}`;
+                }
 
                 imgBox[i].appendChild(detailNodes[i]);
             } 
 
-            else if(`${data.results[i].alt_description}` != 'null') {
+            else if (`${data.results[i].alt_description}` != 'null') {
                 detailNodes[i] = document.createElement('div');
                 detailNodes[i].className = 'img-detail';
                 detailNodes[i].innerHTML = `${data.results[i].alt_description}`;

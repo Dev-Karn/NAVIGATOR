@@ -293,11 +293,11 @@
         </div>
     </section>
 
-    <section class="feed-contents" data-aos="fade-up">
-        <div class="feed-area">
+    <section class="feed-contents" data-aos="fade-up" data-aos-delay="250">
+        <div class="feed-area" data-aos="fade-up" data-aos-delay="250" data-aos-duration="500">
             <h1>Feeds</h1>
             <div class="decoration-line"></div>
-            <div class="grid" id="result"></div>
+            <div class="grid" data-aos="zoom-in-down" id="result"></div>
         </div>
     </section>
 
@@ -333,14 +333,13 @@
             </form>
         </div>
     </section>
-
+    
     <script src="./javascript/Homepage2.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
             offset: 140,
             duration: 1000,
-            // once: false
         });
     </script>
 </body>
